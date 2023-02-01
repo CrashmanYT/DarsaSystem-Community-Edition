@@ -1,0 +1,9 @@
+name: DarsaSystem
+version: '${project.version}'
+main: darsasystem2.darsasystem2.DarsaSystem2
+api-version: 1.19
+authors: [ Shafly ]
+description: Sistem untuk Darsa Build Battle
+commands:
+  darsasystem:
+    description: Root Command
