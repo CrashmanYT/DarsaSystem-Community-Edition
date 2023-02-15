@@ -1,5 +1,6 @@
 package darsasystem2.darsasystem2;
 
+import darsasystem2.darsasystem2.commands.CommandManager;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -10,7 +11,9 @@ public final class DarsaSystem2 extends JavaPlugin {
     public void onEnable() {
         // Plugin startup logic
         setInstance(this);
-        getServer().broadcastMessage("test");
+        CommandManager manager = new CommandManager();
+        getCommand(manager.getCommand()).setExecutor(manager);
+        getCommand(manager.getCommand()).setTabCompleter(new TabComplete());
     }
 
     @Override
